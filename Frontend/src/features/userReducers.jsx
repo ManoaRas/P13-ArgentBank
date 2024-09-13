@@ -10,14 +10,15 @@ const initialState = {
 }
 
 // Define the reducer
-export const userReducer = createReducer(initialState, {
-  [SET_LOGIN]: (state, action) => {
-    state.isLogin = action.payload
-  },
-  [SET_USER]: (state, action) => {
-    state.userData = action.payload
-  },
-  [SET_TOKEN]: (state, action) => {
-    state.token = action.payload
-  }
+export const userReducer = createReducer(initialState, (builder) => {
+  builder
+    .addCase(SET_LOGIN, (state, action) => {
+      state.isLogin = action.payload
+    })
+    .addCase(SET_USER, (state, action) => {
+      state.userData = action.payload
+    })
+    .addCase(SET_TOKEN, (state, action) => {
+      state.token = action.payload
+    })
 })
