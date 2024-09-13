@@ -9,33 +9,33 @@ import { createSlice } from "@reduxjs/toolkit";
 export const userSlice = createSlice({
   name: 'user',
   initialState: {
-    email: '',
-    firstName: '',
-    lastName: ''
+    email: null,
+    firstName: null,
+    lastName: null
   },
   reducers: {
-    setUser: (state, action) => {
-      state.email = action.payload.email
-      state.firstName = action.payload.firstName
-      state.lastName = action.payload.lastName
+    setUser: (state, { payload }) => {
+      state.email = payload.email
+      state.firstName = payload.firstName
+      state.lastName = payload.lastName
 
-      if (action.payload.rememberMe || localStorage.getItem('firstName')) {
-        localStorage.setItem('firstName', action.payload.firstName)
-        localStorage.setItem('lastName', action.payload.lastName)
+      if (payload.rememberMe || localStorage.getItem('firstName')) {
+        localStorage.setItem('firstName', payload.firstName)
+        localStorage.setItem('lastName', payload.lastName)
       }
     },
-    clearUser: (state) => {
-      state.email = ''
-      state.firstName = ''
-      state.lastName = ''
+    clearUser: (state, _) => {
+      state.email = null
+      state.firstName = null
+      state.lastName = null
     },
-    setName: (state, action) => {
-      state.firstName = action.payload.firstName
-      state.lastName = action.payload.lastName
+    setName: (state, { payload }) => {
+      state.firstName = payload.firstName
+      state.lastName = payload.lastName
 
-      if (action.payload.rememberMe || localStorage.getItem('firstName')) {
-        localStorage.setItem('firstName', action.payload.firstName)
-        localStorage.setItem('lastName', action.payload.lastName)
+      if (payload.rememberMe || localStorage.getItem('firstName')) {
+        localStorage.setItem('firstName', payload.firstName)
+        localStorage.setItem('lastName', payload.lastName)
       }
     }
   }

@@ -1,7 +1,7 @@
 import { combineReducers, configureStore } from "@reduxjs/toolkit"
 
+// RTK Slices
 import { api } from './api'
-
 import authReducer from '../features/authSlice'
 import userReducer from '../features/userSlice'
 

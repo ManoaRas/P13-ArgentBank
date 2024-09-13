@@ -25,7 +25,7 @@ export const api = createApi({
       query: (data) => ({
         url: '/user/login',
         method: 'POST',
-        data
+        body: data
       })
     }),
     getUser: builder.mutation({
@@ -38,7 +38,7 @@ export const api = createApi({
       query: (data) => ({
         url: '/user/profile',
         method: 'PUT',
-        data
+        body: data
       }),
     }),
   })
