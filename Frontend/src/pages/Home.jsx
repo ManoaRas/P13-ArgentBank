@@ -19,24 +19,18 @@ export function Home() {
 
       <section className="features">
         <h2 className="sr-only">Features</h2>
-				<Features
-          img={chat}
-          alt="Chat icon"
-          title="You are our #1 priority"
-          text="Need to talk to a representative? You can get in touch through our 24/7 chat or through a phone call in less than 5 minutes."
-        />
-				<Features
-          img={money}
-          alt="Money icon"
-          title="More savings means higher rates"
-          text="The more you save with us, the higher your interest rate will be!"
-        />
-				<Features
-          img={security}
-          alt="Security icon"
-          title="Security you can trust"
-          text="We use top of the line encryption to make sure your data and money is always safe."
-        />
+
+				<Features title="You are our #1 priority" img={chat} alt="Chat icon">
+          Need to talk to a representative? You can get in touch through our 24/7 chat or through a phone call in less than 5 minutes.
+        </Features>
+
+				<Features title="More savings means higher rates" img={money} alt="Money icon">
+          The more you save with us, the higher your interest rate will be!
+        </Features>
+
+				<Features title="Security you can trust" img={security} alt="Security icon">
+          We use top of the line encryption to make sure your data and money is always safe.
+        </Features>
       </section>
     </main>
   )
