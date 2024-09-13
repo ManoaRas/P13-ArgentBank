@@ -13,7 +13,7 @@ import { Profile } from "../pages/Profile"
 export function App() {
   const PrivateRoute = ({ element }) => {
     const token = useSelector(selectCurrentToken)
-    return token ? element : <Navigate to='/login' />
+    return token ? element : <Navigate to='/login' replace={true} />
   }
 
   return (
