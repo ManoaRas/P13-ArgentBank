@@ -31,18 +31,18 @@ export function Header() {
           {token && user.firstName ? (
             <>
               <NavLink className="main-nav-item" to="/profile">
-                <i className="fa fa-user-circle" />
+                <i className="fa fa-user-circle"></i>
                 {user.firstName}
               </NavLink>
 
               <NavLink className="main-nav-item" to="/" onClick={handleSignOut}>
-                <i className="fa fa-sign-out" />
+                <i className="fa fa-sign-out"></i>
                 Sign Out
               </NavLink>
             </>
           ) : (
             <NavLink className="main-nav-item" to="/login">
-              <i className="fa fa-user-circle" />
+              <i className="fa fa-user-circle"></i>
               Sign In
             </NavLink>
           )}
