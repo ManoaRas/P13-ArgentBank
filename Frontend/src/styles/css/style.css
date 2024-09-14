@@ -128,7 +128,7 @@ body {
 .home__content {
   position: relative;
   top: 2rem;
-  width: 200px;
+  width: 12.5px;
   background: #FFFFFF;
   padding: 2rem;
   text-align: left;
@@ -137,9 +137,9 @@ body {
 @media (min-width: 920px) {
   .home__content {
     position: absolute;
-    top: 50px;
-    right: 50px;
-    width: 364px;
+    top: 60px;
+    right: 60px;
+    width: 12.5rem;
     margin: 2rem;
   }
 }
@@ -304,9 +304,13 @@ body {
   font-size: 1.1rem;
   font-weight: bold;
   margin-top: 1rem;
+  border-radius: 0.2rem;
+  border: none;
   border-color: #00bc77;
   background-color: #00bc77;
   color: #FFFFFF;
+  cursor: pointer;
+  transition: 0.4s;
 }
 @media (min-width: 768px) {
   .profile--account__button {

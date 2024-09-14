@@ -16,16 +16,16 @@
   &__content {
     position: relative;
     top: 2rem;
-    width: 200px;
+    width: 12.5px;
     background: $white-color;
     padding: 2rem;
     text-align: left;
     margin: 0 auto;
     @include desktop {
       position: absolute;
-      top: 50px;
-      right: 50px;
-      width: 364px;
+      top: 60px;
+      right: 60px;
+      width: 12.5rem;
       margin: 2rem;
     }
 

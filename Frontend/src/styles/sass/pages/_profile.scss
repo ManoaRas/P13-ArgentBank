@@ -92,9 +92,13 @@
       font-size: 1.1rem;
       font-weight: bold;
       margin-top: 1rem;
+      border-radius: 0.2rem;
+      border: none;
       border-color: $primary-color;
       background-color: $primary-color;
       color: $white-color;
+      cursor: pointer;
+      transition: 0.4s;
       @include tablet {
         width: 200px;
       }
