@@ -6,11 +6,11 @@ html {
   color: #2c3e50;
 }
 
-body {
-  margin: 0;
+#root, body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  margin: 0;
 }
 
 .main {
