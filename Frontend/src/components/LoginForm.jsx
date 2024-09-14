@@ -1,6 +1,5 @@
 // REACT FORM
 import { Formik, Form } from 'formik'
-import { toast } from 'react-hot-toast'
 import { useDispatch } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
 import * as Yup from 'yup'
@@ -46,12 +45,11 @@ export function LoginForm() {
         }))
 
         navigate('/profile', { replace: true })
-        toast.success('You are successfully connected', { position: 'bottom-center' })
       } else {
-        toast.error(`${res.error.data.message}`, { position: 'bottom-center' })
+        console.error(`${res.error.data.message}`)
       }
     } catch (err) {
-      toast.error('SignIn failed', { position: 'bottom-center' })
+      console.error('SignIn failed', err)
     }
   }
 

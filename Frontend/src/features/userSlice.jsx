@@ -1,4 +1,4 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createSelector, createSlice } from "@reduxjs/toolkit"
 
 /**
  * User slice based on RTK
@@ -46,11 +46,13 @@ export const { setUser, clearUser, setName } = userSlice.actions
 export default userSlice.reducer
 
 // Export selectors
-export const selectCurrentUser = (state) => {
-  return state.user.firstName
-    ? state.user
-    : {
+export const selectCurrentUser = createSelector(
+  (state) => state.user,
+  (user) => {
+    if (user.firstName) return user
+    return {
       firstName: localStorage.getItem('firstName'),
       lastName: localStorage.getItem('lastName')
     }
-}
+  }
+)
