@@ -11,9 +11,18 @@ import { Home } from "../pages/Home"
 import { Profile } from "../pages/Profile"
 
 export function App() {
+  const token = useSelector(selectCurrentToken)
+
   const PrivateRoute = ({ element }) => {
-    const token = useSelector(selectCurrentToken)
-    return token ? element : <Navigate to='/login' replace={true} />
+    return token
+      ? element
+      : <Navigate to='/login' replace={true} />
+  }
+
+  const PublicRoute = ({ element }) => {
+    return token
+      ? <Navigate to='/profile' replace={true} />
+      : element
   }
 
   return (
@@ -22,7 +31,7 @@ export function App() {
 
         <Routes>
           <Route element={<Home />} path='/' />
-          <Route element={<Login />} path='/login' />
+          <Route element={<PublicRoute element={<Login />} />} path='/login' />
           <Route element={<PrivateRoute element={<Profile />} />} path='/profile' />
         </Routes>
 
