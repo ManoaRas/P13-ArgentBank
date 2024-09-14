@@ -1,0 +1,11 @@
+@mixin tablet {
+  @media (min-width: $smb) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: $mdb) {
+    @content;
+  }
+}

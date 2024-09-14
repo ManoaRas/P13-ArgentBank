@@ -1,0 +1,59 @@
+.signin {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 0;
+  min-height: 73vh;
+  &--content {
+    box-sizing: border-box;
+    background-color: $white-color;
+    width: 300px;
+    margin: 0 auto;
+    margin-top: 3rem;
+    padding: 2rem;
+  }
+
+  &__icon {
+    font-size: 5rem;
+  }
+
+  &__button {
+    display: block;
+    width: 100%;
+    padding: 8px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-top: 1rem;
+    border-color: $primary-color;
+    background-color: $primary-color;
+    color: $white-color;
+  }
+}
+
+.input-wrapper {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  margin-bottom: 1rem;
+
+  label {
+    font-weight: bold;
+  }
+
+  input {
+    padding: 5px;
+    font-size: 1.2rem;
+  }
+}
+
+.input-error {
+  color: red;
+}
+
+.input-remember {
+  display: flex;
+
+  label {
+    margin-left: 0.25rem;
+  }
+}

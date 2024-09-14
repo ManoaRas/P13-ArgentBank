@@ -58,10 +58,10 @@ export function ProfileEditForm({ pattern, title }) {
     <>
       {isOpen
         ? (
-          <form className="header-edit-form" onSubmit={handleSubmit}>
-            <div className="">
+          <form className="profile--header--edit__form" onSubmit={handleSubmit}>
+            <div className="profile--header--edit__form__col" style={{ alignItems: 'flex-end' }}>
               <input
-                className=""
+                className="profile--header--edit__form__input"
                 type="text"
                 id="firstName"
                 value={firstName}
@@ -70,14 +70,18 @@ export function ProfileEditForm({ pattern, title }) {
                 title={title}
               />
 
-              <button className="" type="submit" onClick={handleSubmit}>
+              <button
+                className="profile--header--edit__form__btn"
+                type="submit"
+                onClick={handleSubmit}
+              >
                 Save
               </button>
             </div>
 
-            <div className="">
+            <div className="profile--header--edit__form__col">
               <input
-                className=""
+                className="profile--header--edit__form__input"
                 type="text"
                 id="lastName"
                 value={lastName}
@@ -86,13 +90,20 @@ export function ProfileEditForm({ pattern, title }) {
                 title={title}
               />
 
-              <button className="" type="reset" onClick={() => setIsOpen(false)}>
+              <button
+                className="profile--header--edit__form__btn"
+                type="reset"
+                onClick={() => setIsOpen(false)}
+              >
                 Cancel
               </button>
             </div>
           </form>
         ) : (
-          <button className="header-edit-button" onClick={() => setIsOpen(true)}>
+          <button
+            className="profile--header--edit__btn"
+            onClick={() => setIsOpen(true)}
+          >
             Edit Name
           </button>
         )

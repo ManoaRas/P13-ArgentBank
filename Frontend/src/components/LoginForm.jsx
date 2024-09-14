@@ -66,7 +66,7 @@ export function LoginForm() {
 
         <CheckboxForm name='rememberMe'>Remember me</CheckboxForm>
 
-        <button className="sign-in-button" type="submit">Sign in</button>
+        <button className="signin__button" type="submit">Sign in</button>
       </Form>
     </Formik>
   )

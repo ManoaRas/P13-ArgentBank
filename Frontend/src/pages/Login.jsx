@@ -2,9 +2,9 @@ import { LoginForm } from '../components/LoginForm'
 
 export function Login() {
   return (
-    <main className="main bg-dark">
-      <section className="sign-in-content">
-        <i className="fa fa-user-circle sign-in-icon"></i>
+    <main className="main signin bg-dark">
+      <section className="signin--content">
+        <i className="fa fa-user-circle signin__icon"></i>
 
         <h1>Sign in</h1>
 

@@ -1,0 +1,45 @@
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 20px;
+
+  a {
+    font-weight: bold;
+    color: $secondary-color;
+  }
+
+  .active {
+    color: $primary-color;
+  }
+
+  &--logo {
+    display: flex;
+    align-items: center;
+    img {
+      width: 200px;
+      max-width: 100%;
+    }
+  }
+
+  &--profile {
+    display: flex;
+  }
+
+  &--item {
+    display: flex;
+    align-items: center;
+    margin: 0 0.5rem;
+    text-decoration: none;
+    span {
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    i {
+      margin-right: 10px;
+      font-size: 18px;
+    }
+  }
+}

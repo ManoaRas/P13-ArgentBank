@@ -20,33 +20,32 @@ export function Header() {
 
   return (
     <header>
-      <nav className="main-nav">
-        <Link className="main-nav-logo" to="/">
-          <img className="main-nav-logo-image" src={logo} alt="Argent Bank Logo" />
-
+      <nav className="nav">
+        <Link className="nav--logo" to="/">
+          <img src={logo} alt="Argent Bank Logo" />
           <h1 className="sr-only">Argent Bank</h1>
         </Link>
 
-        <div>
-          {token && user.firstName ? (
-            <>
-              <NavLink className="main-nav-item" to="/profile">
-                <i className="fa fa-user-circle"></i>
-                {user.firstName}
-              </NavLink>
-
-              <NavLink className="main-nav-item" to="/" onClick={handleSignOut}>
-                <i className="fa fa-sign-out"></i>
-                Sign Out
-              </NavLink>
-            </>
-          ) : (
-            <NavLink className="main-nav-item" to="/login">
+        {token && user.firstName ? (
+          <div className="nav--profile">
+            <NavLink className="nav--item" to="/profile">
               <i className="fa fa-user-circle"></i>
-              Sign In
+              <span>{user.firstName}</span>
             </NavLink>
-          )}
-        </div>
+
+            <NavLink className="nav--item" to="/" onClick={handleSignOut}>
+              <i className="fa fa-sign-out"></i>
+              <span>Sign Out</span>
+            </NavLink>
+          </div>
+        ) : (
+          <div>
+            <NavLink className="nav--item" to="/login">
+              <i className="fa fa-user-circle"></i>
+              <span>Sign In</span>
+            </NavLink>
+          </div>
+        )}
       </nav>
     </header>
   )

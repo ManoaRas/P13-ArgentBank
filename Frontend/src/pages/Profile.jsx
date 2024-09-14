@@ -34,8 +34,8 @@ export function Profile() {
   }, [dispatch, getUser, rememberMe])
 
   return (
-    <main className="main bg-dark">
-      <div className="header">
+    <main className="main profile bg-dark">
+      <div className="profile--header">
         <h1>
           Welcome back
           <br />

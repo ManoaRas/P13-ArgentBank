@@ -1,3 +1,4 @@
+import banner from '../assets/images/banktree.png'
 import chat from '../assets/icons/chat.png'
 import money from '../assets/icons/money.png'
 import security from '../assets/icons/security.png'
@@ -6,14 +7,16 @@ import { Features } from '../components/Features'
 
 export function Home() {
   return (
-    <main>
-      <div className="hero">
-        <section className="hero-content">
+    <main className="main">
+      <div className="home">
+        <img alt="Argent Bank tree" src={banner} className='home__banner' />
+
+        <section className="home__content">
           <h2 className="sr-only">Promoted Content</h2>
-					<p className="subtitle">No fees.</p>
-					<p className="subtitle">No minimum deposit.</p>
-					<p className="subtitle">High interest rates.</p>
-					<p className="text">Open a savings account with Argent Bank today!</p>
+					<p className="home__content__subtitle">No fees.</p>
+					<p className="home__content__subtitle">No minimum deposit.</p>
+					<p className="home__content__subtitle">High interest rates.</p>
+					<p className="home__content__text">Open a savings account with Argent Bank today!</p>
         </section>
       </div>
 
