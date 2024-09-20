@@ -115,7 +115,7 @@ paths:
           description: Invalid Fields
         '500':
           description: Internal Server Error
-  
+
   # New entries (phase 2: transactions)
   /user/transactions:
     get:
@@ -131,12 +131,11 @@ paths:
           type: string
           description: Attach Bearer JWT token
           required: true
-        - in: body
-          name: body
-          description: Transaction per month
+        - in: query
+          name: month
+          type: string
+          description: Transaction per month (format 'YYYY/MM')
           required: true
-          schema:
-            $ref: "#/definitions/Transaction"
       responses:
         '200':
           description: All Transactions retrieve successfully
@@ -148,7 +147,7 @@ paths:
           description: Internal Server Error
   /user/transactions/{transactionId}:
     get:
-      security: 
+      security:
         - Bearer: []
       tags:
         - Transactions Module
@@ -200,10 +199,8 @@ paths:
       produces:
         - application/json
       responses:
-        '200':
-          description: Transaction attributes modified successfully
-          schema:
-            $ref: '#/definitions/TransactionResponse'
+        '204':
+          description: No Content
         '400':
           description: Invalid Fields
         '401':
@@ -270,16 +267,6 @@ definitions:
         type: string
 
   # New entries (phase 2: transactions)
-  Transaction:
-    properties:
-      from:
-        type: string
-        description: start date
-        example: '2024-09-10'
-      to:
-        type: string
-        description: end date
-        example: '2024-09-15'
   TransactionInfos:
     properties:
       category:
